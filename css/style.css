@@ -1,0 +1,142 @@
+body {
+	font-family: 'Lora', serif;
+	margin: 0;
+	color: #333;
+}
+
+h1, h2{
+	text-align: center;
+}
+
+h1 {
+  color: #fff;
+  font-size: 48px;
+  margin-bottom: 0;
+}
+
+h2{
+	color: #000;
+}
+
+h3{
+	color: #fff;
+}
+
+p, ul {
+	line-height: 1.5;
+}
+
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #181425;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+header {
+	text-align: center;
+	background: url(../img/background-city.jpeg);
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+header img {
+	border-radius: 50%;
+	border: 3px solid #fff;
+	padding: 10px;
+}
+
+.padded {
+	padding: 50px 100px;
+}
+
+
+#about {
+	background: #fff;
+}
+
+footer{
+	text-align: center;
+}
+
+.my-bio{
+	text-align: center;
+}
+
+ul.websites {
+	padding: 10px;
+	margin-bottom: 1em;
+	text-align: center;
+
+}
+
+.moving_video{
+    text-align: center;
+    padding: 40px;
+}
+
+#service {
+	background: #f7f7f7;
+}
+
+.contact {
+	text-align: center;
+	background-color: #2e2e2e;
+}
+
+.contact h2 {
+	color: white;
+}
+
+.contact img {
+	border-radius: 50%;
+	width: 100px;
+	margin: 10px;
+}
+
+.contact img:hover {
+	opacity: .5;
+}
+
+div.ordered_bio{
+	
+}
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #4EADFF;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #4EADFF;
+}
+
+ul.gallery {
+	padding: 10px;
+	margin-bottom: 1em;
+	text-align: center;
+
+}
