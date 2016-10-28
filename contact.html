@@ -3,26 +3,61 @@
 <head>
 	<title>#HW3: CSS</title>
 	<link href="css/style.css" rel="stylesheet" type="text/css">
-		<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 </head>
-<body>
-		<nav>
-			<ul class="navbar">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="bio.html">Bio</a></li>
-				<li><a href="gallery.html">Gallery</a></li>	
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>	
+<style>
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
 
+input[type=submit] {
+    width: 100%;
+    background-color: #8f295d;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #E63B2C;
+}
+
+div {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+</style>
+
+<body>
+	<!-- navigation -->
+	<nav>
+		<ul class="navbar">
+			<li><a href="index.html">Home</a></li>
+			<li><a href="bio.html">Bio</a></li>
+			<li><a href="gallery.html">Gallery</a></li>	
+			<li><a href="contact.html">Contact</a></li>
+		</ul>
+	</nav>			
+
+	<!-- header -->
 	<header class="header padded">
 			<img src="img/space.jpg">
 			<h1>Name</h1>
 			<h3>Lorem Ipsum to dolor!</h3>
 		</header>
 
-
-		<table>
+<!-- table info -->
+<table>
   <tr>
     <th>Gender</th>
     <th>Contact</th>
@@ -38,40 +73,41 @@
 </table>
 
 
+<!-- validation form -->
+<h2>Send a Message</h2>
 
-<div style="background: #ededed; border: 1px solid #000; padding: 20px;">
-		<h2>Send A Message</h2>
-		<form method="post" action="">
-		<label>
-			<input name="yName" type="text" placeholder="Your Name" required>
-				
-		</label>
-		<br>
-			<input name="pswrd" type="password" placeholder="Password">
-		</label>
-		<br>
-		<label>
-			<input name="emailAdr" type="email" placeholder="Email Address" required>
-		</label>
-		<br>
-		<label>
-			<textarea name="comments"></textarea>
-		</label>
-		<br>
-		<label>
-			<input type="reset" value="reset the form">
-		</label>
-		<br>
-		<label>
-			<input name="send" type="submit" value="send info">
-		</label>
-		
-		</form>
-		</div>
-		
+<div>
+  <!-- <form action="action_page.php"> -->
+  	<form name="newForm">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="First Name" required>
 
-		
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Last Name" required>
 
+     <label for="email">Email Address</label>
+    <input type="text" id="email" name="emailad" placeholder="Email Address" required>
+
+    <label for="zipcode">Zip Code</label>
+    <input type="text" id="email" name="zipcode" placeholder="Zip Code" required>
+
+   
+    <label for="country">Country</label>
+    <select id="country" name="country">
+      <option value="canada">Canada</option>
+      <option value="japan">Japan</option>
+      <option value="usa">USA</option>
+      <option value="spain">Spain</option>
+
+    </select>
+
+    <textarea rows="10" cols="50" width="100%" placeholder="Leave a message..."></textarea>
+  
+    <input type="submit" value="Submit" id="submitBtn">
+  </form>
+</div>
+		
+		<!-- social media contact-->
 		<section class="contact padded">
 			
 			<h2>Contact Me</h2>
@@ -82,9 +118,38 @@
 
 		</section>
 
-
+		<!-- footer section -->
 		<footer>
 		<p>&copy; 2016 Name</p>
 	</footer>
+
+	<!-- JavaScript -->
+	<script type="text/javascript">
+		var submitBtn = document.getElementById('submitBtn');
+		submitBtn.addEventListener("click", validateForm);
+
+		function validateForm(){
+			var ftname = document.newForm.firstname.value;
+			var ltname = document.newForm.lastname.value;
+			var email = document.newForm.emailad.value;
+			var zip = document.newForm.zipcode.value;
+
+			if((ftname == "") || (ltname == "") || (email == "") || (zip == ""))
+			{
+				alert("You must fill out the form!!!");
+			}
+			else
+			{
+				alert("Thank you for sending a message.");
+			}	
+		}
+
+		<!-- Testing JavaScript Code on Console -->
+		console.log(validateForm);
+
+		
+	</script>
+	<!-- End JavaScript -->
+
 </body>
 </html>
